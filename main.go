@@ -42,13 +42,13 @@ func main() {
 	fmt.Println("<---- [upload end] ----")
 	fmt.Println()
 
-	if config.IsIncremental && incremental != nil {
-		fmt.Println("---- [delete] ---->")
-		deleteErrs := operation.DeleteObjectsIncremental(config.Bucket, incremental)
-		utils.LogErrors(deleteErrs)
-		fmt.Println("<---- [delete end] ----")
-		fmt.Println()
-	}
+	// if config.IsIncremental && incremental != nil {
+	// 	fmt.Println("---- [delete] ---->")
+	// 	deleteErrs := operation.DeleteObjectsIncremental(config.Bucket, incremental)
+	// 	utils.LogErrors(deleteErrs)
+	// 	fmt.Println("<---- [delete end] ----")
+	// 	fmt.Println()
+	// }
 
 	if config.IsIncremental {
 		fmt.Println("---- [incremental] ---->")
